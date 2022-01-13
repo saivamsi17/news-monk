@@ -25,10 +25,10 @@ export class Navbar extends Component {
         </li>
         
         <li className="nav-item">
-          <a className="nav-link" href="/politics">Politics</a>
+          <Link className="nav-link" to="/politics">Politics</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/about">Sports</a>
+          <Link className="nav-link" to="/Empdetails">Sports</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/about">About</a>

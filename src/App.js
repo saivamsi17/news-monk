@@ -11,6 +11,7 @@ import{
 } from "react-router-dom";
 import BusinessNews from './Components/BusinessNews';
 import Politics from './Components/Politics';
+import Empdetails from './Components/Empdetails';
 export default class App extends Component {
   
   
@@ -35,6 +36,11 @@ export default class App extends Component {
 
           <Route exact path="/politics">
             <Politics />
+          </Route>
+
+
+          <Route exact path="/Empdetails">
+            <Empdetails />
           </Route>
         </Switch>
 
