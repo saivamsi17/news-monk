@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar';
-import News from './Components/News';
+import Project from './Components/Project';
 import { render } from  'react-dom';
 import{
   BrowserRouter as Router,
@@ -9,38 +9,42 @@ import{
   Route,
   Link,
 } from "react-router-dom";
-import BusinessNews from './Components/BusinessNews';
-import Politics from './Components/Politics';
-import Empdetails from './Components/Empdetails';
+import Branch from './Components/Branch';
+import Department from './Components/Department';
+import Home from './Components/Home';
 export default class App extends Component {
   
   
   render() {
 
     document.body.style.backgroundColor = "#a846ba";
+
+
+    const selection = "Hyderabad";
     return (
       
 
       <Router>
         <Navbar />
+
         <Switch>
 
+          <Route exact path="/project">
+            <Project />
+          </Route>
+
+          <Route exact path="/branch">
+            <Branch selections = {selection} />
+
+          </Route>
+
+          <Route exact path="/department">
+            <Department />
+          </Route>
+
+
           <Route exact path="/">
-            <News />
-          </Route>
-
-          <Route exact path="/business">
-            <BusinessNews />
-
-          </Route>
-
-          <Route exact path="/politics">
-            <Politics />
-          </Route>
-
-
-          <Route exact path="/Empdetails">
-            <Empdetails />
+            <Home />
           </Route>
         </Switch>
 
